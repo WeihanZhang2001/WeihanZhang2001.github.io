@@ -207,6 +207,25 @@ h3 {
   margin-top: 24px;
 }
 
+.news-section {
+  min-width: 0;
+  align-self: start;
+}
+
+.news-scroll {
+  max-height: 18rem;
+  overflow-y: auto;
+  padding-right: 12px;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+}
+
+.news-scroll:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .timeline {
   display: grid;
   gap: 14px;
@@ -335,4 +354,13 @@ time {
   margin: 8px 0 0;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+@media print {
+  .news-scroll {
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+    scrollbar-gutter: auto;
+  }
 }
