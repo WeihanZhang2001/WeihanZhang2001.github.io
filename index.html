@@ -7,7 +7,8 @@
     <title>Weihan Zhang | Academic Website</title>
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png?v=20260928">
     <link rel="apple-touch-icon" sizes="192x192" href="assets/favicon.png?v=20260928">
-    <link rel="stylesheet" href="styles.css?v=20261029-news">
+    <link rel="stylesheet" href="styles.css?v=20261029-news-auto">
+    <script src="news-scroll.js?v=20261029" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -40,8 +41,14 @@
 
       <section class="section-grid">
         <section class="content-section news-section" aria-labelledby="news-heading">
-          <h2 id="news-heading">News</h2>
-          <div class="news-scroll" role="region" aria-labelledby="news-heading" tabindex="0">
+          <div class="news-header">
+            <h2 id="news-heading">News</h2>
+            <button class="news-toggle" type="button" aria-controls="news-list" aria-label="Pause news scrolling" title="Pause news scrolling" hidden>
+              <img class="news-pause-icon" src="assets/icons/pause.svg" width="18" height="18" alt="">
+              <img class="news-play-icon" src="assets/icons/play.svg" width="18" height="18" alt="" hidden>
+            </button>
+          </div>
+          <div id="news-list" class="news-scroll" role="region" aria-labelledby="news-heading" tabindex="0">
             <ol class="timeline">
               <li>
                 <time datetime="2026-10">Oct 2026</time>
